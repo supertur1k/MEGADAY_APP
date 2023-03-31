@@ -1,0 +1,38 @@
+
+<div th:fragment="header" xmlns:th="http://www.w3.org/1999/xhtml">
+    <div class="topnav" id="myTopnav" >
+        <section id="header">
+            <a class="header-modal-content"><b>MEGADAY</b></a>
+            <a class="btn header-text active" href="/homeEmpl">Главная</a>
+            <a class="btn header-text" href="/profile">Профиль</a>
+            <a class="btn header-text" href="/err404">Сообщения</a>
+            <a class="btn header-text" href="/rating">Рейтинг</a>
+            <a class="btn header-text" href="/blog">Мои магазины</a>
+            <a class="btn header-text" href="/blog/add">Создать магазин</a>
+            <a class="btn header-text" href="/about">Про платформу</a>
+        </section>
+        <aside>
+            <a class="header-exit" href="/logout">Выйти</a>
+        </aside>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+    <script th:inline="javascript">
+        /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+
+
+    <div style="position:absolute;top:30px;left:0px;width:300px;height:229px;background:url('https://uguide.ru/js/script/vetka.png')"></div>
+
+    <script type="text/javascript" src="https://uguide.ru/js/script/snowfall.min.js"></script>
+
+</div>

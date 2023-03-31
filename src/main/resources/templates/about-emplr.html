@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <link rel="stylesheet" href="/css/about.css">
+</head>
+<body>
+<header th:insert="blocks/header-emplr :: header"></header>
+
+<div class="main">
+    <section class="up-section padding ">
+        <div class="container">
+            <h1>MEGADAY</h1>
+            <h2>Все для свадьбы.</h2>
+        </div>
+    </section>
+
+    <div class="modal-content shadow">
+        <div class="container">
+            <p><b>Megaday</b> это маркетплейс свадебных услуг для российского сегмента.
+                Место, где молодожены могут найти и заказать все для своей свадьбы,
+                а подрядчики — продать свои товары.</p>
+        </div>
+    </div>
+</div>
+
+<div th:insert="blocks/footer :: footer"></div>
+</body>
+</html>

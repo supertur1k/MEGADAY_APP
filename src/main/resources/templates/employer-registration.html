@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/employer-registration.css"/>
+    <title>Login Customer</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+<div class="modal">
+    <div class="modal-content shadow">
+        <div class="container">
+            <h1>Регистрация</h1>
+            <p>Пожалуйста, заполните форму.</p>
+            <hr>
+            <form action="#" th:action="@{/employer}"  th:object="${userForm}" method="post">
+                <p>
+                    <label for="username"><b>Почта</b></label>
+                    <input type="email" id="username" th:field="*{username}"  class="form-control" placeholder="Почта" >
+                </p>
+                <p>
+                    <label for="password"><b>Пароль</b></label>
+                    <input type="password" id="password" th:field="*{password}"  class="form-control" placeholder="Пароль">
+                </p>
+                <p>
+                    <label for="passwordConfim"><b>Подтверждение пароля</b></label>
+                    <input type="password" id="passwordConfim" th:field="*{passwordConfirm}"  class="form-control" placeholder="Пароль">
+                </p>
+                <button class="subbtn" type="submit">Зарегистрироваться</button>
+                <div class="clearfix">
+                    <button type="button" onclick='location.href="/login"' class="cancelbtn">Отмена</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

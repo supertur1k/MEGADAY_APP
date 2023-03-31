@@ -1,0 +1,41 @@
+
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/blog-add.css">
+    <title>Создать магазин</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+<header th:insert="blocks/header-empl :: header"></header>
+
+<div class="main">
+    <form class="modal-content shadow" method="post" action="/blog/add">
+        <div class="container">
+            <h2 class="form-signin-heading"><b>Создать магазин</b></h2>
+            <hr>
+            <p>
+                <label for="title"><b>Название магазина</b></label>
+                <input type="text" id="title" name="title" placeholder="Введите название магазина" class="form-control" required>
+            </p>
+            <p>
+                <label for="anons"><b>Краткое описание магазина</b></label>
+                <input type="text" id="anons" name="anons" placeholder="Введите краткое описание магазина" class="form-control" required>
+            </p>
+            <p>
+                <label for="full_text"><b>Основная информация</b></label>
+                <textarea id="full_text" name="full_text" placeholder="Введите основную информацию" class="form-control" style="height:100px"></textarea>
+            </p>
+            <button type="submit" class="btn">Добавить магазин</button>
+        </div>
+    </form>
+</div>
+<div th:insert="blocks/footer :: footer"></div>
+</body>
+</html>

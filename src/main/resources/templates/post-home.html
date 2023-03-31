@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/post-home.css">
+    <title>Мои магазины</title>
+</head>
+<body>
+<header th:insert="blocks/header-empl :: header"></header>
+
+<div class="main">
+    <section class="up-section padding ">
+        <div class="container">
+            <h1>Мои магазины</h1>
+            <h2>Здесь вы можете просмотреть ваши магазины.</h2>
+        </div>
+    </section>
+
+    <div class="main-container padding">
+    <div class="row row-cols-1 row-cols-2 row-cols-3">
+        <div th:each=" el : ${posts}"  class="column">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h3 class="card-text" th:text="${el.title}" id="title"></h3>
+                    <p class="card-text" th:text="${el.anons}" id="anons"></p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="pseudo-button-container shadow">
+                            <div class="pseudo-button">
+                                <a class="p-b" th:href="'/blog/' + ${el.id}">Подробнее</a>
+                            </div>
+                        </div>
+                        <small class="text-muted">megaday</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div th:insert="blocks/footer :: footer"></div>
+</body>
+</html>
+

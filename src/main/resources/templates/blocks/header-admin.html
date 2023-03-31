@@ -1,0 +1,27 @@
+
+<div th:fragment="header" xmlns:th="http://www.w3.org/1999/xhtml">
+    <div class="topnav" id="myTopnav">
+        <section>
+            <a class="header-modal-content"><b>MEGADAY</b></a>
+            <a class="active" href="/homeEmpl">Home</a>
+            <a class="header-text" href="/statistic">Statistics</a>
+        </section>
+        <aside>
+            <a class="header-exit" href="/logout">Log out</a>
+        </aside>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+    <script th:inline="javascript">
+        /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+</div>
